@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> HTML 기본 구조 </title>
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous">
+</script>
+<script src="socket.io-client/dist/socket.io.js"></script>
+</head>
+<script src="chat.js"></script>
+<style>
+  body { margin: 0;padding: 0;background-color: #1e1f21;font-size: 12px;line-height: 16px; }
+  h1, span, text { color: #ffffff; }
+  div#wrap { width: 1280px;margin: 0 auto;padding-top: 30px;}
+  div#chat_list { width: 800px;height: 600px;border: 1px solid #ffffff;overflow-y: scroll; }
+  div#chat_list p { padding-left: 10px;}
+  input#chat_text { width: 500px; }
+</style>
+<body>
+  <div id="wrap">
+    <h1>머신러닝 기반 SW개발자 과정 채팅방</h1>
+    <p>
+      <span>대화명을 입력하세요 : </span>
+      <input type="text" id="id" />
+      <button type="submit" id="chat_in">대화방입장</button>
+      <button type="submit" id="chat_out">대화방나가기</button>
+    </p>
+    <div id="chat_list"></div>
+    <p>
+      <span>채팅 입력 : </span>
+      <input type="text" id="chat_text" />
+    </p>
+    <p><span id="status_msg"></span></p>
+  </div>
+</body>
+</html>
